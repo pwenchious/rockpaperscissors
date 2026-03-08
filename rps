@@ -1,0 +1,101 @@
+import time
+import string
+print("Rock Paper Scissors Vs Computer")
+while True:
+    ans = input("Do you want to play Rock Paper Scissors? y/n ").strip().lower()
+    if ans == "y":
+        print("Continuing...")
+        time.sleep(1)
+        break
+    elif ans == "n":
+        banana = input("Confirm Answer? y/n ").strip().lower()
+
+        if banana == "y":
+            print("Exiting program.")
+            exit()
+
+        elif banana == "n":
+            print("Trying again!")
+
+        else:
+            print("Invalid confirmation.")
+
+
+import random
+computer_choice = ("Rock", "Paper", "Scissors")
+choice = random.choice(computer_choice)
+print("---Choice Menu---")
+print("1. Rock")
+print("2. Paper")
+print("3. Scissors")
+while True:
+    try:
+        def option_rock():
+            comfirm = input("Chosen Answer:[Rock] Continue? y/n ").strip().lower()
+            if comfirm == "y":
+                print("Computer Generating Answer...")
+                time.sleep(1)
+             
+            elif input == "n":
+                print("Re-trying!")
+                    
+        def option_paper():
+            comfirm = input("Chosen Answer:[Paper] Continue? y/n ").strip().lower()
+            if comfirm == "y":
+                print("Computer Generating Answer...")
+                time.sleep(1)
+                
+        def option_scissors():
+            comfirm = input("Chosen Answer:[Paper] Continue? y/n ").strip().lower()
+            if comfirm == "y":
+                print("Computer Generating Answer...")
+                time.sleep(1)
+            elif comfirm == "n":
+                print("exitting..")
+                time.sleep(0.5)
+                exit()    
+                
+    except: ValueError  
+    break
+diddy = input("Pick A number [1-3]: ").strip()
+
+if diddy == "1":
+    option_rock()
+    player_choice = "Rock"
+elif diddy == "2":
+    option_paper()
+    player_choice = "Paper"
+elif diddy == "3":
+    option_scissors()
+    player_choice = "Scissors"
+else:
+    print("invalid answer, exitting program")
+    exit()
+
+print("COMPUTER:", choice)
+while True:
+    if choice == "Rock":
+        if player_choice == "Scissors":
+            print("you lost :(")
+            break
+        elif player_choice == "Paper":
+            print("You Win!!")
+            break
+        else:
+            print("Tie, try again!")
+            break
+    elif choice == "Paper":
+        if player_choice == "Rock":
+            print("you lost :(")
+        elif player_choice == "Scissors":
+            print("You Win!!")
+        else:
+            print("Tie, try again!")
+
+    elif choice == "Scissors":
+        if player_choice == "Paper":
+            print("you lost :(")
+        elif player_choice == "Rock":
+            print("You Win!!")
+        else:
+            print("Tie, try again!")
